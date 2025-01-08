@@ -1,3 +1,4 @@
+import { EmployeeInfoPage } from "@/pages/EmployeeInfoPage";
 import { HomePage } from "@/pages/HomePage";
 import { ListEmployeePage } from "@/pages/ListEmployeePage";
 import { NotFoundPage } from "@/pages/NotFoundPage";
@@ -12,11 +13,13 @@ export enum AppRoutes {
   Home = "Home",
   ListEmployee = "ListEmployee",
   NotFoundPage = "NotFoundPage",
+  EmployeePage = "EmployeePage",
 }
 
 export const RoutesPath: Record<AppRoutes, string> = {
   [AppRoutes.Home]: "/",
   [AppRoutes.ListEmployee]: "/list-employee",
+  [AppRoutes.EmployeePage]: "/list-employee/:id",
   [AppRoutes.NotFoundPage]: "*",
 };
 
@@ -34,6 +37,11 @@ export const routeConfig: Record<AppRoutes, AppRoutesProps> = {
   [AppRoutes.NotFoundPage]: {
     path: RoutesPath.NotFoundPage,
     element: <NotFoundPage />,
+    hasLayout: true,
+  },
+  [AppRoutes.EmployeePage]: {
+    path: RoutesPath.EmployeePage,
+    element: <EmployeeInfoPage />,
     hasLayout: true,
   },
 };

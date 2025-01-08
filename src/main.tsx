@@ -4,12 +4,15 @@ import "@/app/styles/index.scss";
 import { BrowserRouter } from "react-router-dom";
 import { CssBaseline } from "@mui/material";
 import ThemeProvider from "./app/providers/ThemeProvider/ui/ThemeProvider.tsx";
+import { StoreProvider } from "./app/providers/StoreProvider/index.ts";
 
 createRoot(document.getElementById("root")!).render(
   <BrowserRouter>
-    <ThemeProvider>
-      <CssBaseline />
-      <App />
-    </ThemeProvider>
+    <StoreProvider>
+      <ThemeProvider>
+        <CssBaseline />
+        <App />
+      </ThemeProvider>
+    </StoreProvider>
   </BrowserRouter>
 );
