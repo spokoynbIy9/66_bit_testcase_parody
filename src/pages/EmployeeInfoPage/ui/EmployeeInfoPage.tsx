@@ -1,5 +1,7 @@
+import { EmployeeInfo } from "@/features/EmployeeInfo";
+
 const EmployeeInfoPage = () => {
-  return <div>EmployeeInfoPage</div>;
+  return <EmployeeInfo />;
 };
 
 export default EmployeeInfoPage;

@@ -4,7 +4,7 @@ import classes from "./Header.module.scss";
 import { BreadCrumbs } from "@/widgets/BreadCrumbs";
 const Header = () => {
   return (
-    <Stack>
+    <Stack mb={2}>
       <Stack
         justifyContent="space-between"
         flexDirection="row"
